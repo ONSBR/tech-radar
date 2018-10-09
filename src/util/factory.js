@@ -186,14 +186,14 @@ const GoogleSheetInput = function () {
 
             plotLogo(content);
 
-            var bannerText = '<div><h1>Build your own radar</h1><p>Once you\'ve <a href ="https://www.thoughtworks.com/radar/byor">created your Radar</a>, you can use this service' +
-                ' to generate an <br />interactive version of your Technology Radar. Not sure how? <a href ="https://www.thoughtworks.com/radar/how-to-byor">Read this first.</a></p></div>';
+            var bannerText = '<div><h1>Monte seu próprio radar</h1><p>Uma vez que você tenha <a href ="https://wiki.ons.org.br/wiki/radar/byor">criado seu Radar</a>, você pode usar este serviço' +
+                ' para gerar uma <br />versão interativa do seu radar de tecnologia. Não sabe como? <a href ="https://wiki.ons.org.br/wiki/radar/how-to-byor">Leia isso primeiro.</a></p></div>';
 
             plotBanner(content, bannerText);
 
             plotForm(content);
 
-            plotFooter(content);
+            //plotFooter(content);
 
         }
     };
@@ -202,7 +202,7 @@ const GoogleSheetInput = function () {
 };
 
 function set_document_title() {
-    document.title = "Build your own Radar";
+    document.title = "Construa seu próprio radar";
 }
 
 function plotLoading(content) {
@@ -216,15 +216,15 @@ function plotLoading(content) {
 
     plotLogo(content);
 
-    var bannerText = '<h1>Building your radar...</h1><p>Your Technology Radar will be available in just a few seconds</p>';
+    var bannerText = '<h1>Construa seu próprio radar</h1><p>Seu radar de tecnologia estará disponível em alguns segundos</p>';
     plotBanner(content, bannerText);
-    plotFooter(content);
+    //plotFooter(content);
 }
 
 function plotLogo(content) {
     content.append('div')
         .attr('class', 'input-sheet__logo')
-        .html('<a href="https://www.thoughtworks.com"><img src="/images/tw-logo.png" / ></a>');
+        .html('<a href="https://www.ons.org.br"><img src="/images/onslogo_big.png" / ></a>');
 }
 
 function plotFooter(content) {
@@ -254,7 +254,7 @@ function plotForm(content) {
     content.append('div')
         .attr('class', 'input-sheet__form')
         .append('p')
-        .html('<strong>Enter the URL of your <a href="https://www.thoughtworks.com/radar/how-to-byor" target="_blank">published</a> Google Sheet or CSV file below…</strong>');
+        .html('<strong>Entre com a URL da sua Planilha ou CSV <a href="https://wiki.ons.org.br/wiki/radar/how-to-byor" target="_blank">publicado</a> abaixo</strong>');
 
     var form = content.select('.input-sheet__form').append('form')
         .attr('method', 'get');
@@ -269,9 +269,9 @@ function plotForm(content) {
         .attr('type', 'submit')
         .append('a')
         .attr('class', 'button')
-        .text('Build my radar');
+        .text('Monte meu radar');
 
-    form.append('p').html("<a href='https://www.thoughtworks.com/radar/how-to-byor'>Need help?</a>");
+    form.append('p').html("<a href='https://wiki.ons.org.br/wiki/radar/how-to-byor'>Precisa de Ajuda?</a>");
 }
 
 function plotErrorMessage(exception) {

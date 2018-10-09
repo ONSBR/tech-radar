@@ -299,7 +299,7 @@ const Radar = function (size, radar) {
   function createHomeLink(pageElement) {
     if (pageElement.select('.home-link').empty()) {
       pageElement.append('div')
-        .html('&#171; Back to Radar home')
+        .html('&#171; Voltar para início')
         .classed('home-link', true)
         .classed('selected', true)
         .on('click', redrawFullRadar)
@@ -317,8 +317,8 @@ const Radar = function (size, radar) {
   function drawLegend(order) {
     removeRadarLegend();
 
-    var triangleKey = "New or moved";
-    var circleKey = "No change";
+    var triangleKey = "Novo ou movido";
+    var circleKey = "Sem mudanças";
 
     var container = d3.select('svg').append('g')
       .attr('class', 'legend legend'+"-"+order);
@@ -413,7 +413,7 @@ const Radar = function (size, radar) {
     header.select('.radar-title')
       .append('div')
       .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
+      .html('<a href="http://www.ons.org.br"> <img src="/images/onslogo_big.png" /> </a>');
 
     return header;
   }
@@ -441,7 +441,7 @@ const Radar = function (size, radar) {
 
     header.append('div')
       .classed('print-radar button no-capitalize', true)
-      .text('Print this radar')
+      .text('Imprima este radar')
       .on('click', window.print.bind(window));
   }
 
@@ -549,7 +549,7 @@ const Radar = function (size, radar) {
       plotBlips(quadrantGroup, rings, quadrant);
     });
 
-    plotRadarFooter();
+    //plotRadarFooter();
   };
 
   return self;

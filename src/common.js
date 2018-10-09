@@ -1,4 +1,4 @@
 require('./stylesheets/base.scss');
-require('./images/tech-radar-landing-page-wide.png');
-require('./images/tw-logo.png');
+require('./images/Foto_SalaControle_06.jpg');
+require('./images/onslogo_big.png');
 require('./images/favicon.ico');
