@@ -8,10 +8,10 @@
     "dev": "webpack-dev-server --dev --inline",
     "build": "webpack --prod"
   },
-  "author": "ThoughtWorks",
+  "author": "Anderson Cunha",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thoughtworks/build-your-own-radar"
+    "url": "https://github.com/ONSBR/tech-radar"
   },
   "keywords": [
     "tech-radar"
