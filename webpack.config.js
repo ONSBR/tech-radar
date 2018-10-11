@@ -86,7 +86,11 @@ module.exports = {
     devServer: {
         contentBase: buildPath,
         host: '0.0.0.0',
-        port: 8080
+        port: 8080,
+        allowedHosts: [
+            'rj-dk-271-22651',
+            'rj-dk-271-22651.ons.org.br'
+        ]
     }
 };
 
